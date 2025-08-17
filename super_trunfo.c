@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 
 int main() {
@@ -10,6 +9,8 @@ int main() {
     float area_total1, area_total2;
     float pib1, pib2;
     int pt_turistico1, pt_turistico2;
+    float densi_pop1, densi_pop2;
+    float pib_cap1, pib_cap2;
 
 
 //Coleta de dados da primeira carta
@@ -48,6 +49,15 @@ int main() {
     printf("Digite o númeor de pontos turísticos: \n");
         scanf ("%d", &pt_turistico2);
 
+
+//Cálculo da Densidade Populacional e PIB per Capita
+
+densi_pop1 = (float) populacao1 / area_total1;
+densi_pop2 = (float) populacao2 / area_total2;
+
+pib_cap1 = (float) pib1 / populacao1;
+pib_cap2 = (float) pib2 / populacao2;
+
     
 //Exibição de informações da primeira carta, por ordem de coleta
     printf("Carta 1:\n");
@@ -58,9 +68,11 @@ int main() {
     printf("Área total: %.2f km²\n", area_total1);
     printf("PIB: %.2f\n", pib1);
     printf("Pontos turísticos: %d\n", pt_turistico1);
+    printf("Pensidade Populacional: %.2f\n", densi_pop1);
+    printf("PIB per Capita: %.2f\n", pib_cap1);
     printf("\n");
 
-//Exibição de informações da segunda carta, por ordem de coleta
+//Exibição de informações da primeira carta, por ordem de coleta
 
     printf("Carta 2:\n");
     printf("Estado: %s\n", estado2);
@@ -70,6 +82,8 @@ int main() {
     printf("Área total: %.2f km²\n", area_total2);
     printf("PIB: %.2f\n", pib2);
     printf("Pontos turísticos: %d\n", pt_turistico2);
+    printf("Pensidade Populacional: %.2f\n", densi_pop2);
+    printf("PIB per Capita: %.2f\n", pib_cap2);
 
     return 0;
 }
